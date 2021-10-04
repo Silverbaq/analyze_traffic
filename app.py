@@ -34,7 +34,13 @@ class AnalyseTraffic(Resource):
             return None
 
 
+class Index(Resource):
+    def get(self):
+        return "Hello, world!"
+
+
 api.add_resource(AnalyseTraffic, '/analyse_traffic')
+api.add_resource(Index, '/')
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=5000)
